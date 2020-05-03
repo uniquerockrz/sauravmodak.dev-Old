@@ -12,14 +12,18 @@ module.exports = {
                 heading: [ "Rubik", "Helvetica", "Arial" ],
                 body: [ "Karla", "Helvetica", "Arial" ]
             },
-            textColor: {
-                primary: '#566b78'
+            colors: {
+                primary: '#2161f2',
+                primaryLight: '#4d80f4'
             },
             lineHeight: {
                 normal: '1.5'
             },
             minWidth: {
                 '1/4': '25%'
+            },
+            maxWidth: {
+                '800': '800px'
             }
         },
     },

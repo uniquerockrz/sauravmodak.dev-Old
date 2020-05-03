@@ -1,10 +1,12 @@
 /* eslint-disable react/jsx-indent */
 import React from "react";
 import Helmet from "react-helmet";
+import { CloudinaryContext} from 'cloudinary-react';
+
 import config from "../../data/SiteConfig";
 
 import "./minireset.min.css";
-import './index.css';
+import './index.sass';
 import '../css/global.sass';
 
 import NavBar from '../components/NavBar/NavBar';
@@ -13,16 +15,18 @@ export default class MainLayout extends React.Component {
     render() {
         const { children } = this.props;
         return (
-            <React.Fragment>
-                <NavBar />
-                <div className="container mx-auto">
-                    <Helmet>
-                        <meta name="description" content={config.siteDescription} />
-                        <html lang="en" />
-                    </Helmet>
-                    {children}
+            <CloudinaryContext cloudName="sauravmodakdev">
+                <div id="main">
+                    <NavBar />
+                    <div className="container mx-auto max-w-800">
+                        <Helmet>
+                            <meta name="description" content={config.siteDescription} />
+                            <html lang="en" />
+                        </Helmet>
+                        {children}
+                    </div>
                 </div>
-            </React.Fragment>
+            </CloudinaryContext>
         );
     }
 }
