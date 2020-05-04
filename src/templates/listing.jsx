@@ -46,7 +46,7 @@ class Listing extends React.Component {
                         <div className="flex flex-col">
                             <Helmet title={config.siteTitle} />
                             <SEO />
-                            <div className="flex font-heading font-bold text-4xl my-6">
+                            <div className="flex font-heading font-bold text-4xl mt-10">
                                 Latest Articles
                             </div>
                             <PostListing postEdges={postEdges} />
@@ -73,15 +73,16 @@ export const listingQuery = graphql`
                 node {
                     fields {
                         slug
-                        date
+                        date(fromNow: true)
+                        postType
                     }
-                    excerpt
                     timeToRead
+                    excerpt
                     frontmatter {
+                        category
                         title
-                        tags
                         cover
-                        date
+                        date(fromNow: true)
                     }
                 }
             }
