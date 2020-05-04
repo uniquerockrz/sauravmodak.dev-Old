@@ -1,4 +1,6 @@
-- url: https://images.unsplash.com/photo-1485796826113-174aa68fd81b
-  title: DataScience
+- url: https://res.cloudinary.com/sauravmodakdev/image/upload/v1588593943/covers/photo-1485796826113-174aa68fd81b_mbknqk.jpg
+  title: Cover_DataScience
   credit: h heyerlein
-
+- url: https://res.cloudinary.com/sauravmodakdev/image/upload/v1588593943/covers/ev-gpjvRZyavZc-unsplash_wxjljv.jpg 
+  title: Cover_MachineLearning
+  credit: ev

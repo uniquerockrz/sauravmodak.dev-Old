@@ -1,6 +1,6 @@
 ---
 title: "Hello, World!"
-cover: "5.jpg"
+cover: "DataScience"
 category: "moar"
 date: "2020-05-01"
 slug: "hello-world"

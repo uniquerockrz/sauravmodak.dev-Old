@@ -6,13 +6,18 @@ const Post = (post) => (
     <StaticQuery
         query={graphql`
             query {
-                DataScienceImage: unsplashImagesYaml(title: {eq: "DataScience"}){
-                    credit
-                    title
-                    localFile {
-                        childImageSharp {
-                            fluid(maxWidth: 20, quality: 100) {
-                                ...GatsbyImageSharpFluid_tracedSVG
+                allUnsplashImagesYaml(filter: {title: {regex: "/^cover_/i"}}) {
+                    edges {
+                        node {
+                            id
+                            title
+                            credit
+                            localFile {
+                                childImageSharp {
+                                    fluid {
+                                        ...GatsbyImageSharpFluid_tracedSVG
+                                    }
+                                }
                             }
                         }
                     }
@@ -20,14 +25,13 @@ const Post = (post) => (
             }`
         }
         render = {(data) => {
-            console.log(post);
-            console.log(data);
             return (
                 <div>
                     <h1>Hello</h1>
-                    <Img fluid={data.DataScienceImage.localFile.childImageSharp.fluid} key={post.path} />
+                    <Img key={post.url} fluid={data.allUnsplashImagesYaml.edges.find((image) => {
+                        return image.node.title.split('_')[1] ===  post.post.cover;
+                    }).node.localFile.childImageSharp.fluid } />
                 </div>
-                
             )  
         }}
     />
