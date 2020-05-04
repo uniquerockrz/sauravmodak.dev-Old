@@ -9,7 +9,7 @@ module.exports = {
                 'xl': '1280px',
             },
             fontFamily: {
-                heading: [ "Rubik", "Helvetica", "Arial" ],
+                heading: [ "Inter", "Helvetica", "Arial" ],
                 body: [ "Karla", "Helvetica", "Arial" ]
             },
             colors: {

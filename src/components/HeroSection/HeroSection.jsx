@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Image } from 'cloudinary-react';
-import { FaFacebook, FaTwitter, FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaGithub, FaInstagram, FaLinkedinIn, FaRss } from "react-icons/fa";
 
 import './HeroSection.sass'
 
@@ -20,7 +20,7 @@ class HeroSection extends Component {
                             </p>
                         </div>
                         <div className="flex ml-6 mt-8 flex-row">
-                            <button class="bg-primary hover:bg-primaryLight text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded h-16">
+                            <button className="bg-primary hover:bg-primaryLight text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded h-16">
                                 Get In Touch
                             </button>
                             <div className="flex text-5xl mt-2 ml-3">
@@ -29,6 +29,7 @@ class HeroSection extends Component {
                                 <FaInstagram className="mx-2 text-primary hover:text-primaryLight" />
                                 <FaTwitter className="mx-2 text-primary hover:text-primaryLight" />
                                 <FaFacebook className="mx-2 text-primary hover:text-primaryLight" />
+                                <FaRss className="mx-2 text-primary hover:text-primaryLight" />
                             </div>                            
                         </div>
                     </div>

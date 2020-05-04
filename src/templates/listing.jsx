@@ -43,12 +43,15 @@ class Listing extends React.Component {
                 <React.Fragment>
                     <div className="flex flex-col">
                         <HeroSection />
-                        <div className="flex">
+                        <div className="flex flex-col">
                             <Helmet title={config.siteTitle} />
                             <SEO />
+                            <div className="flex font-heading font-bold text-4xl my-6">
+                                Latest Articles
+                            </div>
                             <PostListing postEdges={postEdges} />
                         </div>
-                        {this.renderPaging()}
+                        {/* {this.renderPaging()} */}
                     </div>
                 </React.Fragment>
             </Layout>
@@ -60,28 +63,28 @@ export default Listing;
 
 /* eslint no-undef: "off" */
 export const listingQuery = graphql`
-  query ListingQuery($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(
-      sort: { fields: [fields___date], order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-            date
-          }
-          excerpt
-          timeToRead
-          frontmatter {
-            title
-            tags
-            cover
-            date
-          }
+    query ListingQuery($skip: Int!, $limit: Int!) {
+        allMarkdownRemark(
+            sort: { fields: [fields___date], order: DESC }
+            limit: $limit
+            skip: $skip
+        ) {
+            edges {
+                node {
+                    fields {
+                        slug
+                        date
+                    }
+                    excerpt
+                    timeToRead
+                    frontmatter {
+                        title
+                        tags
+                        cover
+                        date
+                    }
+                }
+            }
         }
-      }
     }
-  }
 `;

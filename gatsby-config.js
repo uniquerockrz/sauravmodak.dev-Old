@@ -34,7 +34,7 @@ module.exports = {
         resolve: `gatsby-plugin-google-fonts`,
             options: {
                 fonts: [
-                    `rubik\:400,500,700`,
+                    `Inter\:400,500,700`,
                     `karla\:400,700`
                 ],
                 display: 'swap'
@@ -74,6 +74,13 @@ module.exports = {
                     "gatsby-remark-prismjs"
                 ]
             }
+        },
+        `gatsby-transformer-yaml`,
+        {
+            resolve: `gatsby-source-remote-images`,
+            options: {
+                filter: node => node.internal.type === `UnsplashImagesYaml`,
+            },
         },
         {
             resolve: "gatsby-plugin-google-analytics",
