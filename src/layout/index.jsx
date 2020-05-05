@@ -10,6 +10,7 @@ import './index.sass';
 import '../css/global.sass';
 
 import NavBar from '../components/NavBar/NavBar';
+import Footer from '../components/Footer/Footer';
 
 export default class MainLayout extends React.Component {
     render() {
@@ -25,6 +26,7 @@ export default class MainLayout extends React.Component {
                         </Helmet>
                         {children}
                     </div>
+                    <Footer config={config} />
                 </div>
             </CloudinaryContext>
         );
