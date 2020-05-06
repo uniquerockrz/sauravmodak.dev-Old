@@ -12,9 +12,9 @@ module.exports = {
             title: config.siteTitle,
             description: config.siteDescription,
             image_url: `${urljoin(
-        config.siteUrl,
-        config.pathPrefix
-      )}/logos/logo-512.png`,
+                config.siteUrl,
+                config.pathPrefix
+            )}/logos/logo-300.png`,
             copyright: config.copyright
         }
     },
@@ -110,13 +110,8 @@ module.exports = {
                 theme_color: config.themeColor,
                 display: "minimal-ui",
                 icons: [{
-                        src: "/logos/logo-192.png",
-                        sizes: "192x192",
-                        type: "image/png"
-                    },
-                    {
-                        src: "/logos/logo-512.png",
-                        sizes: "512x512",
+                        src: "/logos/logo-300.png",
+                        sizes: "300x300",
                         type: "image/png"
                     }
                 ]
@@ -143,21 +138,21 @@ module.exports = {
                     return ret;
                 },
                 query: `
-        {
-          site {
-            siteMetadata {
-              rssMetadata {
-                site_url
-                feed_url
-                title
-                description
-                image_url
-                copyright
-              }
-            }
-          }
-        }
-      `,
+                    {
+                        site {
+                            siteMetadata {
+                                rssMetadata {
+                                    site_url
+                                    feed_url
+                                    title
+                                    description
+                                    image_url
+                                    copyright
+                                }
+                            }
+                        }
+                    }
+                `,
                 feeds: [{
                     serialize(ctx) {
                         const {
@@ -180,32 +175,32 @@ module.exports = {
                         }));
                     },
                     query: `
-            {
-              allMarkdownRemark(
-                limit: 1000,
-                sort: { order: DESC, fields: [fields___date] },
-              ) {
-                edges {
-                  node {
-                    excerpt
-                    html
-                    timeToRead
-                    fields {
-                      slug
-                      date
-                    }
-                    frontmatter {
-                      title
-                      cover
-                      date
-                      category
-                      tags
-                    }
-                  }
-                }
-              }
-            }
-          `,
+                        {
+                            allMarkdownRemark(
+                                limit: 1000,
+                                sort: { order: DESC, fields: [fields___date] },
+                            ) {
+                                edges {
+                                    node {
+                                        excerpt
+                                        html
+                                        timeToRead
+                                        fields {
+                                            slug
+                                            date
+                                        }
+                                        frontmatter {
+                                            title
+                                            cover
+                                            date
+                                            category
+                                            tags
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    `,
                     output: config.siteRss,
                     title: config.siteRssTitle
                 }]
