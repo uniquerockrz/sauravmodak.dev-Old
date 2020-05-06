@@ -9,7 +9,7 @@ class HeroSection extends Component {
         return (
             <div className="flex sd-hero-section my-8">
                 <div className="flex w-2/5">
-                    <Image publicId="webassets/public_profile_pic_300_vi3njz" width="300" height="400" className="rounded-lg" />
+                    <Image publicId="webassets/public_profile_pic_300_vi3njz" width="300" height="400" className="rounded-lg" secure="true" />
                 </div>
                 <div className="flex w-3/5 flex-col">
                     <div className="flex flex-col h-full justify-between">
@@ -20,16 +20,28 @@ class HeroSection extends Component {
                             </p>
                         </div>
                         <div className="flex ml-5 mt-8 flex-row">
-                            <button className="bg-primary hover:bg-primaryLight text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded h-16">
-                                Get In Touch
-                            </button>
+                            <a href="mailto:hi@sauravmodak.dev">
+                                <button className="bg-primary hover:bg-primaryLight text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded h-16">
+                                    Get In Touch
+                                </button>
+                            </a>
                             <div className="flex text-5xl mt-2 ml-3">
-                                <FaGithub className="mx-2 text-primary hover:text-primaryLight" />
-                                <FaLinkedinIn className="mx-2 text-primary hover:text-primaryLight" />
-                                <FaInstagram className="mx-2 text-primary hover:text-primaryLight" />
-                                <FaTwitter className="mx-2 text-primary hover:text-primaryLight" />
-                                <FaFacebook className="mx-2 text-primary hover:text-primaryLight" />
-                                <FaRss className="mx-2 text-primary hover:text-primaryLight" />
+                                <a href="https://github.com/uniquerockrz" target="_blank">
+                                    <FaGithub className="mx-2 text-primary hover:text-primaryLight" />
+                                </a>
+                                <a href="https://www.linkedin.com/in/sauravmodak/" target="_blank">
+                                    <FaLinkedinIn className="mx-2 text-primary hover:text-primaryLight" />
+                                </a>
+                                <a href="https://www.instagram.com/sauravmodak.dev/" target="_blank">
+                                    <FaInstagram className="mx-2 text-primary hover:text-primaryLight" />
+                                </a>
+                                <a href="https://twitter.com/sauravmodakdev" target="_blank">
+                                    <FaTwitter className="mx-2 text-primary hover:text-primaryLight" />
+                                </a>
+                                {/* <FaFacebook className="mx-2 text-primary hover:text-primaryLight" /> */}
+                                <a href="https://sauravmodak.dev/rss.xml" target="_blank">
+                                    <FaRss className="mx-2 text-primary hover:text-primaryLight" />
+                                </a>
                             </div>                            
                         </div>
                     </div>

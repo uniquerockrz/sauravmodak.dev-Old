@@ -14,7 +14,7 @@ class Footer extends Component {
         return (
             <footer className="flex mb-10 w-100 justify-center align-center">
                 <div className="flex text-heading text-xl text-gray-600 text-center">
-                    Unless otherwise stated, all content is under a&nbsp;<a href="#" className="text-primaryLight">Creative Commons</a>&nbsp;License.&nbsp;<a href="#" className="text-primaryLight">Handcrafted</a>&nbsp;by me using&nbsp;<a href="#" className="text-primaryLight">Gatsby</a>&nbsp;&&nbsp;<a href="#" className="text-primaryLight">Tainwind.css</a>. Hosted on&nbsp;<a href="#" className="text-primaryLight">Netlify CDN.</a>
+                    Unless otherwise stated, all content is under a&nbsp;<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" className="text-primaryLight">Creative Commons</a>&nbsp;License.&nbsp;<a href="https://github.com/uniquerockrz/sauravmodak.dev" target="_blank" className="text-primaryLight">Handcrafted</a>&nbsp;by me using&nbsp;<a href="https://www.gatsbyjs.org/" target="_blank" className="text-primaryLight">Gatsby</a>&nbsp;&&nbsp;<a href="https://tailwindcss.com/" target="_blank" className="text-primaryLight">Tainwind.css</a>. Hosted on&nbsp;<a href="https://www.netlify.com/" target="_blank" className="text-primaryLight">Netlify CDN.</a>
                 </div>
             </footer>
         );

@@ -31,16 +31,20 @@ const Post = (post) => (
                 <div className="max-w-full flex flex-row h-64 my-16 post-min-height">
                     <div className="flex w-1/3 flex-grow-0 flex-shrink-0">
                         <div className="w-full">
-                            <Img className="rounded-lg" key={post.url} fluid={data.allUnsplashImagesYaml.edges.find((image) => {
-                                return image.node.title.split('_')[1] ===  post.post.cover;
-                            }).node.localFile.childImageSharp.fluid }  />
+                            <Link to={post.post.path}>
+                                <Img className="rounded-lg" key={post.url} fluid={data.allUnsplashImagesYaml.edges.find((image) => {
+                                    return image.node.title.split('_')[1] ===  post.post.cover;
+                                }).node.localFile.childImageSharp.fluid }  />
+                            </Link>
                         </div>
                     </div>
                     <div className="flex w-2/3 flex-col ml-6 justify-between">
                         <div className="flex">
-                            <h1 className="font-heading text-4xl">
-                                {post.post.title}
-                            </h1>
+                            <Link to={post.post.path}>
+                                <h1 className="font-heading text-4xl hover:text-primaryLight">
+                                    {post.post.title}
+                                </h1>
+                            </Link>
                         </div>
                         <div className="flex">
                             <div className="font-body text-2xl text-gray-700">
