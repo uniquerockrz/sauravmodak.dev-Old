@@ -1,9 +1,12 @@
 /* eslint "no-console": "off" */
-
 const path = require("path");
 const _ = require("lodash");
 const moment = require("moment");
 const siteConfig = require("./data/SiteConfig");
+
+if (process.env.NODE_ENV === 'development') {
+    process.env.GATSBY_WEBPACK_PUBLICPATH = '/'
+}
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
     const { createNodeField } = actions;

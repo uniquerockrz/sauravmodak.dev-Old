@@ -35,7 +35,8 @@ module.exports = {
             options: {
                 fonts: [
                     `Inter\:400,500,700`,
-                    `karla\:400,700`
+                    `karla\:400,700`,
+                    `Montserrat\:400,700`
                 ],
                 display: 'swap'
             }

@@ -10,7 +10,8 @@ module.exports = {
             },
             fontFamily: {
                 heading: [ "Inter", "Helvetica", "Arial" ],
-                body: [ "Karla", "Helvetica", "Arial" ]
+                body: [ "Karla", "Helvetica", "Arial" ],
+                reading: [ "Montserrat", "Helvetica", "Arial" ] 
             },
             colors: {
                 primary: '#2161f2',
