@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Image } from 'cloudinary-react';
-import { FaFacebook, FaTwitter, FaGithub, FaInstagram, FaLinkedinIn, FaRss } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaGithub, FaInstagram, FaLinkedinIn, FaTelegramPlane, FaRss } from "react-icons/fa";
 
 import './HeroSection.sass'
 
@@ -37,6 +37,9 @@ class HeroSection extends Component {
                                 </a>
                                 <a href="https://twitter.com/sauravmodakdev" target="_blank">
                                     <FaTwitter className="mx-2 text-primary hover:text-primaryLight" />
+                                </a>
+                                <a href="https://t.me/sauravmodak" target="_blank">
+                                    <FaTelegramPlane className="mx-2 text-primary hover:text-primaryLight" />
                                 </a>
                                 {/* <FaFacebook className="mx-2 text-primary hover:text-primaryLight" /> */}
                                 <a href="https://sauravmodak.dev/rss.xml" target="_blank">

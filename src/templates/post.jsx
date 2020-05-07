@@ -65,6 +65,9 @@ export default class PostTemplate extends React.Component {
                         <div className="flex w-full">
                             <UserInfo config={config} />
                         </div>
+                        <div className="flex w-full">
+                            <Disqus postNode={postNode} />
+                        </div>
                     </div>
                 </div>
             </Layout>

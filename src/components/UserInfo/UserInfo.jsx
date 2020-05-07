@@ -32,7 +32,7 @@ class UserInfo extends Component {
                         <div className="flex flex-row w-full justify-center my-8">
                             <div className="flex">
                                 <a href="https://cdn.forms-content.sg-form.com/28e12e19-9083-11ea-8d16-c2cc607c0155" target="_blank">
-                                    <button class="bg-white text-primary hover:text-primaryLight font-bold py-2 px-4 rounded-full h-12">
+                                    <button className="bg-white text-primary hover:text-primaryLight font-bold py-2 px-4 rounded-full h-12">
                                         Subscribe
                                     </button>
                                 </a>
