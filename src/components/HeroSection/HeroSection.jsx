@@ -19,8 +19,8 @@ class HeroSection extends Component {
                                 Currently I am a <span className="text-primary font-extrabold">Data Scientist,</span> with affinity towards <span className="text-primary font-extrabold">Natural Language Processing.</span> Previously, I had worked with <span className="text-primary font-extrabold">JavaScript</span> stack, built scalable <span className="text-primary font-extrabold">Data Mining</span> Applications, fiddled a bit with <span className="text-primary font-extrabold">Robotic Process Automation</span> and delivered applications for a wide range of customers, back in my agency days. I am a <span className="text-primary font-extrabold">lifelong learner</span>, this devblog is a rough compilation of what I learn.
                             </p>
                         </div>
-                        <div className="flex xs:flex-col xs:w-full xs:items-center xs:my-6">
-                            <a href="mailto:hi@sauravmodak.dev" className="flex xs:mb-6">
+                        <div className="flex xs:flex-col xs:w-full xs:items-center xs:my-8">
+                            <a href="mailto:hi@sauravmodak.dev" className="flex xs:mb-8">
                                 <button className="bg-primary hover:bg-primaryLight text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded h-16">
                                     Get In Touch
                                 </button>

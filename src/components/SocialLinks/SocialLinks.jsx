@@ -34,9 +34,9 @@ class SocialLinks extends Component {
         const coverImageCreditUrl = 'https://unsplash.com/' + coverImageCredit;
 
         return (
-            <div className="flex flex-row h-12 w-full justify-between">
-                <div className="flex w-2/5 justify-between">
-                   <div className="flex self-center font-body text-lg">
+            <div className="flex xs:flex-col xs:w-full xs:items-center">
+                <div className="flex xs:flex-row xs:justify-between xs:w-full">
+                   <div className="flex font-body xs:text-base">
                         Share This:
                     </div> 
                     <EmailShareButton subject={post.title} body={url} className="flex">
@@ -53,20 +53,14 @@ class SocialLinks extends Component {
                     >
                         <LinkedinIcon round size={iconSize} />
                     </LinkedinShareButton> 
-                    <RedditShareButton url={url} title={post.title}>
-                        <RedditIcon round size={iconSize} />
-                    </RedditShareButton>
                     <TelegramShareButton url={url} className="flex">
                         <TelegramIcon round size={iconSize} />
                     </TelegramShareButton> 
                     <TwitterShareButton url={url} title={post.title} className="flex">
                         <TwitterIcon round size={iconSize} />
                     </TwitterShareButton>
-                    <WhatsappShareButton title={url}>
-                        <WhatsappIcon round size={iconSize}></WhatsappIcon>
-                    </WhatsappShareButton>
                 </div>
-                <div className="flex w-1/5 self-center font-body text-lg flex-row justify-end">
+                <div className="flex font-body xs:text-base xs:flex-row xs:justify-center xs:mt-6">
                     <div className="flex">
                         Cover Image By&nbsp;<a href={coverImageCreditUrl} target="_blank">{coverImageCredit}</a>
                     </div>

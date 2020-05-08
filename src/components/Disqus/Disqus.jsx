@@ -39,8 +39,8 @@ class Disqus extends Component {
         );
         console.log(url)
         return (
-            <div className="flex flex-col w-full">
-                <div className="flex flex-row w-full text-2xl font-body italic">
+            <div className="flex xs:flex-col xs:w-full">
+                <div className="flex xs:flex-row xs:w-full xs:text-xl font-body italic xs:flex-wrap xs:text-center">
                     We welcome your comments privately via&nbsp;<a href="https://twitter.com/sauravmodakdev" target="_blank" className="text-primary hover:text-primaryLight">Twitter</a>,&nbsp;<a href="https://t.me/sauravmodak" target="_blank" className="text-primary hover:text-primaryLight">Telegram</a>,&nbsp;or&nbsp;<a href="mailto:hi@sauravmodak.dev" className="text-primary hover:text-primaryLight">E-mail</a>.
                 </div>
                 <ReactDisqusComments
