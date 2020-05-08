@@ -7,9 +7,9 @@ import './HeroSection.sass'
 class HeroSection extends Component {
     render(){
         return (
-            <div className="flex xs:my-6 xs:flex-col">
-                <div className="flex xs:order-2 xs:w-full">
-                    <Image publicId="webassets/public_profile_pic_300_vi3njz" width="300" height="400" className="rounded-lg" secure="true" />
+            <div className="flex xs:mt-6 xs:flex-col">
+                <div className="flex xs:order-2 xs:w-full xs:justify-center">
+                    <Image publicId="webassets/public_profile_pic_300_vi3njz" width="300" height="400" className="flex rounded-lg" secure="true" />
                 </div>
                 <div className="flex xs:order-1 xs:flex-col xs:w-full">
                     <div className="flex xs:flex-col xs:items-center xs:w-full">
@@ -20,12 +20,12 @@ class HeroSection extends Component {
                             </p>
                         </div>
                         <div className="flex xs:flex-col xs:w-full xs:items-center xs:my-6">
-                            <a href="mailto:hi@sauravmodak.dev" className="flex xs:mb-4">
+                            <a href="mailto:hi@sauravmodak.dev" className="flex xs:mb-6">
                                 <button className="bg-primary hover:bg-primaryLight text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded h-16">
                                     Get In Touch
                                 </button>
                             </a>
-                            <div className="flex xs:flex-row xs:text-3xl">
+                            <div className="flex xs:flex-row xs:text-4xl">
                                 <a href="https://github.com/uniquerockrz" target="_blank">
                                     <FaGithub className="mx-2 text-primary hover:text-primaryLight" />
                                 </a>

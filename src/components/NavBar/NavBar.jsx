@@ -10,7 +10,7 @@ class NavBar extends Component {
                 <div className="container xs:max-w-full xs:px-8 sd-navbar-border xs:pb-2">
                     <nav className="flex xs:items-center bg-white xs:flex-col">
                         <div className="flex xs:items-center">
-                            <Link to="/" className="text-gray-900 hover:text-primaryLight font-normal font-heading xs:tracking-wide xs:text-3xl">Saurav Modak</Link>
+                            <Link to="/" className="text-gray-900 hover:text-primaryLight xs:font-extrabold font-heading xs:tracking-wide xs:text-3xl">Saurav Modak</Link>
                         </div>
                         <div className="flex xs:items-center xs:w-full xs:justify-center">
                             <ul className="flex xs:items-center xs:flex-row xs:justify-around xs:w-full">

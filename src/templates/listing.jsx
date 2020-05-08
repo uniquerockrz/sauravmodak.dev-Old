@@ -46,7 +46,7 @@ class Listing extends React.Component {
                         <div className="flex flex-col">
                             <Helmet title={config.siteTitle} />
                             <SEO />
-                            <div className="flex font-heading font-bold text-4xl mt-10">
+                            <div className="flex font-heading font-bold xs:text-3xl xs:my-6">
                                 Latest Articles
                             </div>
                             <PostListing postEdges={postEdges} />
