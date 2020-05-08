@@ -17,9 +17,9 @@ export default class MainLayout extends React.Component {
         const { children } = this.props;
         return (
             <CloudinaryContext cloudName="sauravmodakdev">
-                <div id="main">
+                <div id="main" className="xs:mt-8">
                     <NavBar />
-                    <div className="container mx-auto max-w-800">
+                    <div className="container xs:max-w-full xs:px-6">
                         <Helmet>
                             <meta name="description" content={config.siteDescription} />
                             <html lang="en" />

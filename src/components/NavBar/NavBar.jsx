@@ -7,15 +7,15 @@ class NavBar extends Component {
     render() {
         return (
             <div className="sd-navbar-shadow">
-                <div className="container mx-auto max-w-800 sd-navbar-border">
-                    <nav className="flex items-center bg-white sd-navbar">
-                        <div className="flex items-center flex-shrink-0 min-w-1/4">
-                            <Link to="/" className="text-gray-900 hover:text-primaryLight font-normal font-heading tracking-wide text-5xl">Saurav Modak</Link>
+                <div className="container xs:max-w-full xs:px-8 sd-navbar-border xs:pb-2">
+                    <nav className="flex xs:items-center bg-white xs:flex-col">
+                        <div className="flex xs:items-center">
+                            <Link to="/" className="text-gray-900 hover:text-primaryLight font-normal font-heading xs:tracking-wide xs:text-3xl">Saurav Modak</Link>
                         </div>
-                        <div className="flex items-center justify-end flex-shrink flex-grow">
-                            <ul className="flex items-center">
-                                <li className="hover:bg-primaryLight h-12 rounded-md"><Link to="/about" className="font-body text-3xl mx-8 text-gray-900 hover:text-white">About</Link></li>
-                                <li className="hover:bg-primaryLight h-12 rounded-md"><Link to="/contact" className="font-body text-3xl mx-8 text-gray-900 hover:text-white">Contact</Link></li>
+                        <div className="flex xs:items-center xs:w-full xs:justify-center">
+                            <ul className="flex xs:items-center xs:flex-row xs:justify-around xs:w-full">
+                                <li className="hover:bg-primaryLight h-12 rounded-md flex"><Link to="/about" className="font-body xs:text-2xl text-gray-900 hover:text-white">About</Link></li>
+                                <li className="hover:bg-primaryLight h-12 rounded-md flex"><Link to="/contact" className="font-body xs:text-2xl text-gray-900 hover:text-white">Contact</Link></li>
                             </ul>
                         </div>
                     </nav>
