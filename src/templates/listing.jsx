@@ -41,12 +41,12 @@ class Listing extends React.Component {
         return (
             <Layout>
                 <React.Fragment>
-                    <div className="flex flex-col">
+                    <div className="flex xs:flex-col sm:flex-col">
                         <HeroSection />
-                        <div className="flex flex-col">
+                        <div className="flex xs:flex-col sm:flex-col">
                             <Helmet title={config.siteTitle} />
                             <SEO />
-                            <div className="flex font-heading font-bold xs:text-3xl xs:my-6">
+                            <div className="flex font-heading font-bold xs:text-3xl xs:my-6 sm:text-4xl sm:my-8">
                                 Latest Articles
                             </div>
                             <PostListing postEdges={postEdges} />

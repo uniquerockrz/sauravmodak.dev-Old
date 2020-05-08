@@ -17,7 +17,7 @@ const Post = (post) => (
                             localFile {
                                 childImageSharp {
                                     fluid(maxHeight: 160) {
-                                        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                                        ...GatsbyImageSharpFluid_withWebp_noBase64
                                     }
                                 }
                             }

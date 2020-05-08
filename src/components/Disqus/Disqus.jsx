@@ -37,7 +37,6 @@ class Disqus extends Component {
             postNode.fields.postType,
             postNode.fields.slug
         );
-        console.log(url)
         return (
             <div className="flex xs:flex-col xs:w-full">
                 <div className="flex xs:flex-row xs:w-full xs:text-xl font-body italic xs:flex-wrap xs:text-center">
