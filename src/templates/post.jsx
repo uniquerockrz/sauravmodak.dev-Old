@@ -32,34 +32,34 @@ export default class PostTemplate extends React.Component {
                         <title>{`${post.title} | ${config.siteTitle}`}</title>
                     </Helmet>
                     <SEO postPath={slug} postNode={postNode} postSEO />
-                    <div className="flex flex-col w-full xs:mt-4">
-                        <div className="flex flex-row justify-center xs:mb-2">
-                            <h1 className="flex font-heading xs:text-3xl font-bold text-gray-700">
+                    <div className="flex flex-col w-full xs:mt-4 sm:mt-8">
+                        <div className="flex flex-row justify-center xs:mb-2 sm:mb-4">
+                            <h1 className="flex font-heading xs:text-3xl font-bold text-gray-700 sm:text-5xl">
                                 {post.title}
                             </h1>
                         </div>
-                        <div className="flex flex-row justify-center xs:mb-4">
-                            <p className="flex font-body xs:text-xl text-gray-600 text-center">
+                        <div className="flex flex-row justify-center xs:mb-4 sm:mb-6">
+                            <p className="flex font-body xs:text-xl text-gray-600 text-center sm:text-2xl">
                                 {data.markdownRemark.excerpt}
                             </p>
                         </div>
-                        <div className="flex xs:flex-col xs:items-center mb-6">
-                            <div className="flex font-body xs:text-xl text-gray-700">
+                        <div className="flex xs:flex-col xs:items-center xs:mb-6 sm:flex-col sm:items-center sm:mb-8">
+                            <div className="flex font-body xs:text-xl text-gray-700 sm:text-2xl sm:mb-2">
                                 Posted&nbsp;<span className="font-bold">{post.date}</span>&nbsp;in&nbsp;<span className="text-primary font-extrabold uppercase">{post.category}</span>
                             </div>
-                            <div className="flex text-primaryLight font-bold text-2xl uppercase">
+                            <div className="flex text-primaryLight font-bold xs:text-2xl uppercase sm:text-2xl">
                                 {data.markdownRemark.timeToRead} minute read
                             </div>
                         </div>
-                        <div className="flex xs:w-full xs:mb-8">
-                            <Img className="xs:rounded-md" fluid={data.allUnsplashImagesYaml.edges.find((image) => {
+                        <div className="flex xs:w-full xs:mb-8 sm:w-full sm:mb-10">
+                            <Img className="xs:rounded-md sm:rounded-lg" fluid={data.allUnsplashImagesYaml.edges.find((image) => {
                                 return image.node.title.split('_')[1] ===  data.markdownRemark.frontmatter.cover;
                             }).node.localFile.childImageSharp.fluid }  />
                         </div>
-                        <div className="flex xs:w-full xs:flex-col">
-                            <div className="font-reading leading-relaxed tracking-wide xs:text-xl" id="markdown-content" dangerouslySetInnerHTML={{ __html: postNode.html }} />
+                        <div className="flex xs:w-full xs:flex-col sm:w-full sm:flex-col">
+                            <div className="font-reading leading-relaxed tracking-wide xs:text-xl sm:text-2xl" id="markdown-content" dangerouslySetInnerHTML={{ __html: postNode.html }} />
                         </div>
-                        <div className="flex xs:w-full">
+                        <div className="flex xs:w-full sm:w-full">
                             <SocialLinks postPath={data.markdownRemark.fields.postType + slug} postNode={postNode} coverImageCredit={coverImageCredit} />
                         </div>
                         <div className="flex w-full">

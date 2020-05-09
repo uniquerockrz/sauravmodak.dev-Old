@@ -34,9 +34,9 @@ class SocialLinks extends Component {
         const coverImageCreditUrl = 'https://unsplash.com/' + coverImageCredit;
 
         return (
-            <div className="flex xs:flex-col xs:w-full xs:items-center">
-                <div className="flex xs:flex-row xs:justify-between xs:w-full">
-                   <div className="flex font-body xs:text-base">
+            <div className="flex xs:flex-col xs:w-full xs:items-center sm:flex-col sm:w-full sm:items-center xs:mt-4 sm:mt-6">
+                <div className="flex xs:flex-row xs:justify-between xs:w-full sm:flex-row sm:justify-between sm:w-full">
+                   <div className="flex font-body xs:hidden sm:hidden">
                         Share This:
                     </div> 
                     <EmailShareButton subject={post.title} body={url} className="flex">
@@ -60,7 +60,7 @@ class SocialLinks extends Component {
                         <TwitterIcon round size={iconSize} />
                     </TwitterShareButton>
                 </div>
-                <div className="flex font-body xs:text-base xs:flex-row xs:justify-center xs:mt-6">
+                <div className="flex font-body xs:text-base xs:flex-row xs:justify-center xs:mt-6 sm:text-lg sm:flex-row sm:justify-center sm:mt-6">
                     <div className="flex">
                         Cover Image By&nbsp;<a href={coverImageCreditUrl} target="_blank">{coverImageCredit}</a>
                     </div>

@@ -38,8 +38,8 @@ class Disqus extends Component {
             postNode.fields.slug
         );
         return (
-            <div className="flex xs:flex-col xs:w-full">
-                <div className="flex xs:flex-row xs:w-full xs:text-xl font-body italic xs:flex-wrap xs:text-center">
+            <div className="flex xs:flex-col xs:w-full sm:flex-col sm:w-full">
+                <div className="flex xs:flex-row xs:w-full xs:text-xl font-body italic xs:flex-wrap xs:text-center sm:flex-row sm:w-full sm:text-2xl sm:flex-wrap sm:text-center">
                     We welcome your comments privately via&nbsp;<a href="https://twitter.com/sauravmodakdev" target="_blank" className="text-primary hover:text-primaryLight">Twitter</a>,&nbsp;<a href="https://t.me/sauravmodak" target="_blank" className="text-primary hover:text-primaryLight">Telegram</a>,&nbsp;or&nbsp;<a href="mailto:hi@sauravmodak.dev" className="text-primary hover:text-primaryLight">E-mail</a>.
                 </div>
                 <ReactDisqusComments
