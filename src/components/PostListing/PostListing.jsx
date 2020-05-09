@@ -28,9 +28,9 @@ const Post = (post) => (
         }
         render = {(data) => {
             return (
-                <div className="flex xs:flex-col">
-                    <div className="flex xs:mb-4">
-                        <div className="w-full">
+                <div className="flex xs:flex-col sm:flex-col">
+                    <div className="flex xs:mb-4 sm:mb-4">
+                        <div className="xs:w-full sm:w-full">
                             <Link to={post.post.path}>
                                 <Img className="rounded-lg" key={post.url} fluid={data.allUnsplashImagesYaml.edges.find((image) => {
                                     return image.node.title.split('_')[1] ===  post.post.cover;
@@ -38,25 +38,25 @@ const Post = (post) => (
                             </Link>
                         </div>
                     </div>
-                    <div className="flex xs:flex-col xs:items-center">
+                    <div className="flex xs:flex-col xs:items-center sm:flex-col sm:items-center">
                         <div className="flex">
                             <Link to={post.post.path}>
-                                <h1 className="font-heading xs:text-3xl hover:text-primaryLight">
+                                <h1 className="font-heading xs:text-3xl hover:text-primaryLight sm:text-5xl xs:link-underline-light sm:link-underline-light">
                                     {post.post.title}
                                 </h1>
                             </Link>
                         </div>
                         <div className="flex">
-                            <div className="font-body xs:text-xl text-gray-700">
+                            <div className="font-body xs:text-xl text-gray-700 sm:text-2xl">
                             posted <span className="font-bold">{post.post.date}</span> in <span className="text-primary font-extrabold uppercase">{post.post.category}</span>
                             </div>
                         </div>
-                        <div className="flex xs:my-4">
-                            <div className="font-body xs:text-2xl text-justify text-gray-600">
+                        <div className="flex xs:my-4 sm:my-6">
+                            <div className="font-body xs:text-2xl text-justify text-gray-600 sm:text-4xl">
                                 {post.post.excerpt}
                             </div>
                         </div>
-                        <div className="flex xs:mb-6">
+                        <div className="flex xs:mb-6 sm:mb-8">
                             <div className="text-primaryLight font-bold text-lg uppercase">
                                 {post.post.timeToRead} minute read
                             </div>
